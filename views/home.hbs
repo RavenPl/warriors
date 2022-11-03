@@ -1,0 +1,31 @@
+<div style="text-align: center; margin: 50px 0">
+    <h1>Welcome to the Warriors Game!</h1>
+    <h2>Choose your players!</h2>
+</div>
+
+<form style="text-align: center" action="arena/" method="GET">
+
+    <div class="row" style="margin-bottom: 50px;">
+        <div class="five columns offset-by-one">
+            <label for="id1">Warrior 1</label>
+            <select class="u-full-width" name="id1" id="id1">
+                {{#each names}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="five columns offset-by-one">
+            <label for="warrior2">Warrior 2</label>
+            <select class="u-full-width" name="id2" id="id2">
+                {{#each names}}
+                    <option value="{{this.id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+    </div>
+
+    <input style="width: 40%" class="button-primary" type="submit" value="Submit">
+
+
+</form>
+
