@@ -1,6 +1,7 @@
 const canvas = document.querySelector('canvas');
-
 const context = canvas.getContext('2d');
+const clock = document.querySelector('.clock');
+const resultInfo = document.querySelector('.resultInfo');
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -22,33 +23,81 @@ class Sprite {
 
     height = 150;
     width = 50;
+    image = new Image();
+
+
+    constructor({position, imgSrc, scale = 1, framesMax = 1, offset = {x: 0, y: 0}}) {
+
+        this.position = position;
+        this.image.src = imgSrc;
+        this.scale = scale;
+        this.framesMax = framesMax;
+        this.framesCurr = 0;
+        this.framesElapsed = 0;
+        this.framesHold = 10;
+        this.offset = offset;
+    }
+
+    draw() {
+        context.drawImage(
+            this.image,
+            this.framesCurr * (this.image.width / this.framesMax),
+            0,
+            this.image.width / this.framesMax,
+            this.image.height,
+            this.position.x - this.offset.x,
+            this.position.y - this.offset.y,
+            (this.image.width / this.framesMax) * this.scale,
+            this.image.height * this.scale
+        )
+    }
+
+    animateFrames() {
+        this.framesElapsed++;
+        if (this.framesElapsed % this.framesHold === 0) {
+            if (this.framesCurr < this.framesMax - 1) {
+                this.framesCurr++
+            } else {
+                this.framesCurr = 0
+            }
+        }
+    }
+
+    update() {
+        this.draw();
+        this.animateFrames()
+    }
+}
+
+class Warrior extends Sprite {
+
+    height = 150;
+    width = 50;
     lastKey;
     isAttacking;
     health = 100;
 
-    constructor({position, velocity, color = 'red', offset}) {
-        this.position = position;
+    constructor({position, velocity, color = 'red', imgSrc, scale, framesMax, offset}) {
+
+        super({
+            position, imgSrc, scale, framesMax, offset
+        })
+
         this.velocity = velocity;
         this.attackBox = {
-            position: this.position,
+            position: {
+                x: this.position.x,
+                y: this.position.y
+            },
+            offset,
             width: 100,
             height: 50,
-            offset,
         };
         this.color = color;
-    }
 
-    // tworzymy figury przedstawiajace warriorow
-    draw() {
-        // ludek
-        context.fillStyle = this.color;
-        context.fillRect(this.position.x, this.position.y, this.width, this.height);
-
-        // attackBox
-        if (this.isAttacking) {
-            context.fillStyle = 'green';
-            context.fillRect(this.attackBox.position.x + this.attackBox.offset.x, this.attackBox.position.y, this.attackBox.width, this.attackBox.height);
-        }
+        this.framesCurr = 0;
+        this.framesElapsed = 0;
+        this.framesHold = 10;
     }
 
     attack() {
@@ -61,11 +110,15 @@ class Sprite {
     // ta funkcja jest odpowiedzialana za nasza animacje, za ruch
     update() {
         this.draw();
+        this.animateFrames()
+
+        this.attackBox.position.x = this.position.x + this.attackBox.offset.x;
+        this.attackBox.position.y = this.position.y;
 
         this.position.y += this.velocity.y;
         this.position.x += this.velocity.x;
 
-        if (this.position.y + this.height + this.velocity.y >= canvas.height) {
+        if (this.position.y + this.height + this.velocity.y >= canvas.height - 60) {
             this.velocity.y = 0
         } else {
             this.velocity.y += gravity;
@@ -73,7 +126,25 @@ class Sprite {
     }
 }
 
-const player = new Sprite({
+const background = new Sprite({
+    position: {
+        x: 0,
+        y: 0
+    },
+    imgSrc: "./img/background.png"
+})
+
+const shop = new Sprite({
+    position: {
+        x: 755,
+        y: 255
+    },
+    scale: 2,
+    imgSrc: "./img/shop.png",
+    framesMax: 6
+})
+
+const player = new Warrior({
     position: {
         x: 0,
         y: 0
@@ -82,14 +153,18 @@ const player = new Sprite({
         x: 0,
         y: 0
     },
+
+    imgSrc: "./img/Warrior1/Idle.png",
+    framesMax: 8,
+    scale: 2.5,
     offset: {
-        x: 0,
-        y: 0
+        x: 190,
+        y: 155
     },
-    color: 'yellow'
+
 })
 
-const enemy = new Sprite({
+const enemy = new Warrior({
     position: {
         x: 250,
         y: 0
@@ -100,10 +175,12 @@ const enemy = new Sprite({
         y: 0
     },
     offset: {
-        x: -50,
+        x: 150,
         y: 0
     },
-    color: 'blue'
+    imgSrc: "./img/Warrior1/Idle.png",
+    framesMax: 8,
+    scale: 2,
 })
 
 const keys = {
@@ -121,6 +198,38 @@ const keys = {
     },
 }
 
+let time = 16;
+let idInterval;
+
+function whoWins({player1, player2, idInterval}) {
+
+    clearInterval(idInterval);
+    resultInfo.style.display = "flex";
+    if (player1.health > player2.health) {
+        resultInfo.textContent = 'Player1 wins!';
+    } else if (player1.health < player2.health) {
+        resultInfo.textContent = 'Player2 wins!';
+    } else if (player1.health === player2.health) {
+        resultInfo.textContent = 'Tie!';
+    }
+}
+
+function fightTimer() {
+
+    if (time > 0) {
+        idInterval = setTimeout(fightTimer, 1000);
+        time--;
+        clock.textContent = String(time);
+    }
+
+    if (time === 0) {
+        whoWins({player1: player, player2: enemy, idInterval});
+    }
+
+}
+
+fightTimer()
+
 /* tworzymy petlę animacji. dajac animate() do funkcji window.requestAnimationFrame() tworzymy petle
 animacji
 
@@ -129,6 +238,9 @@ function animate() {
     window.requestAnimationFrame(animate);
     context.fillStyle = 'black';
     context.fillRect(0, 0, canvas.width, canvas.height);
+    background.update();
+    shop.update();
+
     player.update();
     enemy.update();
 
@@ -167,7 +279,15 @@ function animate() {
         document.querySelector('.health-bar-playerOne').style.width = player.health + "%";
         enemy.isAttacking = false;
     }
+
+// sprawdzanie kto wygral gdy zycie jest ponizej 0
+
+    if (player.health <= 0 || enemy.health <= 0) {
+        whoWins({player1: player, player2: enemy, idInterval});
+        resultInfo.style.display = "flex";
+    }
 }
+
 
 animate()
 

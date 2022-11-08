@@ -24,6 +24,11 @@
 }
 
 .clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
     height: 100px;
     width: 100px;
     flex-shrink: 0;
@@ -36,4 +41,16 @@
     width: 100%;
     background-color: grey;
     /*border-radius: 10%;*/
+}
+
+.resultInfo {
+    position: absolute;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
