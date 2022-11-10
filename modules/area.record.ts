@@ -64,5 +64,3 @@ export class AreaRecord {
         return warrior1.healPoints <= 0 ? warrior2 : warrior1
     }
 }
-
-AreaRecord.
