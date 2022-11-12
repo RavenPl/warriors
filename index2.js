@@ -457,7 +457,7 @@ function animate() {
         player.framesCurr === 4
     ) {
         enemy.takeHit();
-        document.querySelector('.health-bar-playerTwo').style.width = enemy.health + "%";
+        document.querySelector('.playerTwo-health-bar').style.width = enemy.health + "%";
         player.isAttacking = false;
     }
 
@@ -472,7 +472,7 @@ function animate() {
         enemy.framesCurr === 2
     ) {
         player.takeHit();
-        document.querySelector('.health-bar-playerOne').style.width = player.health + "%";
+        document.querySelector('.playerOne-health-bar').style.width = player.health + "%";
         enemy.isAttacking = false;
     }
     if (enemy.isAttacking && enemy.framesCurr === 2) {
