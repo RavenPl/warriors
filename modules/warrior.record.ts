@@ -54,6 +54,13 @@ export class WarriorRecord {
         return found[0]
     }
 
+    static async updateVictories(id: string, wins: number) {
+        await pool.execute('UPDATE `warriors` SET `victories` = :wins WHERE `id` = :id', {
+            id,
+            wins,
+        })
+    }
+
     totalPointsValidator(): void {
         const summary = this.totalPoints - this.addStats();
 

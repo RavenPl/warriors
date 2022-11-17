@@ -8,6 +8,7 @@ export const handleError = (err: Error, req: Request, res: Response, next: NextF
     res
         .status(err instanceof ErrorValidation ? 400 : 500)
         .render('error', {
-            message: err instanceof ErrorValidation ? err.message : "Try again later!"
+            message: err instanceof ErrorValidation ? err.message : "Try again later!",
+            path: req.originalUrl
         })
 }

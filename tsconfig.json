@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
     "strict": true,
     "strictPropertyInitialization": true,
     "noImplicitAny": true,
@@ -10,7 +12,8 @@
     "lib": [
       "es6",
       "dom.iterable",
-      "DOM"
+      "DOM",
+      "dom"
     ],
     "outDir": "dist",
     "experimentalDecorators": true,
