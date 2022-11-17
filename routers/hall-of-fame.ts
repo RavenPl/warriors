@@ -19,6 +19,5 @@ hallOfFameRouter
             }
         });
 
-        res.render('hall-of-fame', {list})
-
+        res.render('hall-of-fame', {list});
     })

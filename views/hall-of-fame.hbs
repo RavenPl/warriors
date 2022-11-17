@@ -1,12 +1,17 @@
-<div class="row" style="text-align: center">
+<div class="container">
 
-    <h1>Hall of Fame!</h1>
-    <h2>Top-10</h2>
-    {{#each list}}
-        <p>
-            {{this.position}}. <strong>{{this.name}}</strong> - ilość wygranych: {{this.victories}}
-        </p>
-    {{/each}}
+    <div class="row">
+
+        <h5>Hall of Fame!</h5>
+        <h6>Top-10</h6>
+        <div class="top-ten">
+            {{#each list}}
+                <p>
+                    {{this.position}}. <strong>{{this.name}}</strong> - ilość wygranych: {{this.victories}}
+                </p>
+            {{/each}}
+        </div>
+    </div>
 </div>
 
 

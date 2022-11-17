@@ -1,0 +1,29 @@
+<div class="container">
+    <p class="warrior-points red">You have 6 points left to assign!</p>
+    <form action="/warriors/create/add" method="POST">
+
+        <div class="row">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Write a name..." id="name" name="name" required>
+        </div>
+        <div class="row">
+            <label for="healPoints">Heal Points</label>
+            <input class="formInput" type="number" value=1 min="1" step="1" id="healPoints" name="healPoints">
+        </div>
+        <div class="row">
+            <label for="strength">Strength</label>
+            <input class="formInput" type="number" value=1 min="1" step="1" id="strength" name="strength">
+        </div>
+        <div class="row">
+            <label for="defence">Defence</label>
+            <input class="formInput" type="number" value=1 min="1" step="1" id="defence" name="defence">
+        </div>
+        <div class="row">
+            <label for="agility">Agility</label>
+            <input class="formInput" type="number" value=1 min="1" step="1" id="agility" name="agility">
+        </div>
+        <input class="button-primary" type="submit" value="Submit">
+    </form>
+
+</div>
+<script src="/create-warrior.js" type="module"></script>
