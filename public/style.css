@@ -1,0 +1,135 @@
+.container {
+    text-align: center;
+}
+
+.canvas-container {
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+}
+
+.stats {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.wins-stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.playerOne-health-bar-container, .playerTwo-health-bar-container {
+    position: relative;
+    display: flex;
+    width: 45%;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.playerOne-health-bar-container {
+    border-left: 3px solid white;
+}
+
+.playerTwo-health-bar-container {
+    justify-content: flex-end;
+    border-right: 3px solid white;
+}
+
+.playerOne-health-bar, .playerTwo-health-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #0100DF;
+}
+
+.playerOne-name-holder, .playerTwo-name-holder {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.playerOne-name-holder {
+    left: 5%;
+}
+
+.playerTwo-name-holder {
+    right: 5%;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 50px;
+    width: 10%;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.armor-stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.playerOne-armor-bar-container, .playerTwo-armor-bar-container {
+    width: 100px;
+    height: 10px;
+    border: 3px solid black;
+    background-color: transparent;
+}
+
+.playerTwo-armor-bar-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.playerOne-armor-bar, .playerTwo-armor-bar {
+    background-color: yellow;
+    width: 100%;
+    height: 100%;
+}
+
+.resultInfo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+}
+
+.red, .green {
+    margin: 40px auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #f87171;
+    border: 1px solid black;
+}
+
+.green {
+    background-color: #a3e635;
+}
+
+.top-ten {
+    margin: 50px 0;
+    padding: 15px 0;
+    background-color: #e4e4e7;
+}
