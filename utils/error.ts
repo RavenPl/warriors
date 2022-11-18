@@ -9,6 +9,6 @@ export const handleError = (err: Error, req: Request, res: Response, next: NextF
         .status(err instanceof ErrorValidation ? 400 : 500)
         .render('error', {
             message: err instanceof ErrorValidation ? err.message : "Try again later!",
-            path: req.originalUrl
+            path: req.path === "/warriors/arena" ? "" : "create"
         })
 }

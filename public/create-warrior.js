@@ -11,7 +11,7 @@ formInputs.forEach(input => input.addEventListener('change', () => {
     switch (true) {
         case ((pointsToAssign - value) === 0) :
             spanTotalPoints.classList.add('green');
-            spanTotalPoints.textContent = `You are ready!`;
+            spanTotalPoints.textContent = `Points assigned correctly!`;
             break;
         case ((pointsToAssign - value) === 1):
             spanTotalPoints.textContent = `You have 1 point left to assign!`;

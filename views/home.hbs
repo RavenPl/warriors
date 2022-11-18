@@ -1,11 +1,11 @@
 <div class="container">
 
-    <div style="text-align: center; margin: 50px 0">
+    <div style="margin: 50px 0">
         <h4>Welcome to the Warriors Game!</h4>
         <h5>Choose your players!</h5>
     </div>
 
-    <form style="text-align: center; margin-top: 100px" action="arena/" method="GET">
+    <form style="margin-top: 100px" action="/warriors/arena" method="GET">
 
         <div class="row" style="margin-bottom: 50px;">
             <div class="five columns offset-by-one">
@@ -17,7 +17,7 @@
                 </select>
             </div>
             <div class="five columns offset-by-one">
-                <label for="warrior2">Warrior 2</label>
+                <label for="id2">Warrior 2</label>
                 <select class="u-full-width" name="id2" id="id2">
                     {{#each names}}
                         <option value="{{this.id}}">{{this.name}}</option>

@@ -133,3 +133,17 @@
     padding: 15px 0;
     background-color: #e4e4e7;
 }
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #e77b7b;
+    border: 2px solid black;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+}
