@@ -1,22 +1,7 @@
 <div class="container">
-    <div
-            style="
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-                background-color: #e77b7b;
-                text-align: center;
-                border: 2px solid black;
-                width: 80%;
-                height: 200px;
-                margin: 0 auto;
-                color: black;
-                font-size: 26px;
-                padding: 20px;
-        "
-    >
-        <h3>Error!</h3>
-        <p>{{message}}</p>
+    <div class="error">
+        <h4>Error!</h4>
+        <span>{{message}}</span>
     </div>
-    {{>go-back}}
+    {{>go-back path=path}}
 </div>
