@@ -34,7 +34,7 @@ export class WarriorRecord {
     static async hasName(name: string) {
         const warriorsNames = (await this.getAll()).map(obj => obj.name.toLowerCase());
         if (warriorsNames.includes(name.toLowerCase())) {
-            throw new ErrorValidation(`The name you used - ${name} is already taken!`);
+            throw new ErrorValidation(`The name you used - ${name} - is already taken!`);
         }
     }
 
