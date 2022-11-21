@@ -8,8 +8,7 @@ export const arenaRouter = Router();
 arenaRouter
     .get('/', async (req, res) => {
 
-        console.log(req.query);
-        const {id1, id2} = req.query;
+        const {id1, id2, gameType} = req.query;
 
         if (id1 === id2) {
             throw new ErrorValidation(`You can't choose the same warrior!`)
@@ -20,6 +19,5 @@ arenaRouter
         // const area = new AreaRecord(warrior1, warrior2);
         // const winner = area.fight();
 
-        res.render('arena', {warrior1, warrior2})
-        // res.end()
+        res.render(`${gameType}`, {warrior1, warrior2})
     })
