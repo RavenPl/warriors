@@ -28,14 +28,12 @@ createWarriorRouter
         res.redirect('/warriors')
     })
 
-    .patch('/update/:id', async (req, res) => {
+    .patch('/:id', async (req, res) => {
 
         const id = req.params.id;
         const winner = await WarriorRecord.getOne(id);
         const updatedVictories = winner.victories
         await WarriorRecord.updateVictories(id, updatedVictories + 1);
-        // console.log(warrior.name);
-        console.log(id, winner, updatedVictories);
 
         res.end();
     })

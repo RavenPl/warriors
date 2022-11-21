@@ -1,0 +1,36 @@
+<div class="canvas-container">
+    <div class="stats">
+        <div class="wins-stats-container">
+            <span class="playerOne-wins">Wins:{{warrior1.victories}}</span>
+            <span class="playerTwo-wins">Wins:{{warrior2.victories}}</span>
+        </div>
+        <div class="playerOne-health-bar-container">
+            <div class="playerOne-health-bar"></div>
+            <span class="playerOne-name-holder">{{warrior1.name}}</span>
+            <span hidden class="id1">{{warrior1.id}}</span>
+        </div>
+        <div class="clock">60</div>
+        <div class="playerTwo-health-bar-container">
+            <div class="playerTwo-health-bar"></div>
+            <span class="playerTwo-name-holder">{{warrior2.name}}</span>
+            <span hidden class="id2">{{warrior2.id}}</span>
+        </div>
+        <div class="armor-stats-container">
+            <div class="playerOne-armor-bar-container">
+                <div class="playerOne-armor-bar"></div>
+            </div>
+            <div class="playerTwo-armor-bar-container">
+                <div class="playerTwo-armor-bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="resultInfo"></div>
+    <canvas></canvas>
+
+    <div style="text-align: center; margin-top: 50px">
+        <button class="returnBtn" disabled>Return (5)</button>
+    </div>
+
+
+</div>
+
