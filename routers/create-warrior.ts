@@ -28,7 +28,7 @@ createWarriorRouter
         res.redirect('/warriors')
     })
 
-    .patch('/update/:id', async (req, res) => {
+    .patch('/:id', async (req, res) => {
 
         const id = req.params.id;
         const winner = await WarriorRecord.getOne(id);
