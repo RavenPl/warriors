@@ -15,6 +15,7 @@
     align-items: center;
     width: 100%;
     padding: 20px;
+    font-size: 14px;
 }
 
 .wins-stats-container {
@@ -117,7 +118,7 @@
 }
 
 .red, .green {
-    margin: 40px auto;
+    margin: 0 auto 30px;
     padding: 20px;
     width: 60%;
     background-color: #f87171;
@@ -146,4 +147,104 @@
     color: black;
     font-size: 20px;
     padding: 20px;
+}
+
+.text-arena {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    /*overflow: hidden;*/
+    /*background-image: url('/img/arena.png');*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*gap: 5%;*/
+}
+
+.warrior-first, .warrior-second {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.warrior-first, .warrior-first-log {
+    background-color: #bb9457;
+}
+
+.warrior-second, .warrior-second-log {
+    background-color: #c37d92;
+}
+
+.warrior-image {
+    height: 260px;
+    width: 200px;
+    margin: 20px 0;
+}
+
+.icon-stats {
+    height: 20px;
+    width: 20px;
+}
+
+.icon-log {
+    height: 20px;
+    width: 20px;
+}
+
+.warrior-stats {
+    padding: 5px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.battle-logs {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    background-color: rgba(33, 33, 33, 0.1);
+    /*overflow: hidden;*/
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.log {
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.hidden-log {
+    display: none;
+}
+
+.showBtn {
+    margin: 20px auto 0;
+    order: 1;
+    width: 30%;
+}
+
+.warrior-dead {
+    background-color: red;
+}
+
+.warrior-wins {
+    background-color: gold;
+}
+
+.create-warrior {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    background-image: url("img/background/create-warrior.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.create-warrior label {
+    background-color: rgba(156, 163, 175, 0.8);
+    border-radius: 4px;
 }
