@@ -1,3 +1,8 @@
+body {
+    background-image: url("img/background/main.jpg");
+    background-color: grey;
+}
+
 .container {
     text-align: center;
 }
@@ -118,7 +123,7 @@
 }
 
 .red, .green {
-    margin: 0 auto 30px;
+    margin: 0 auto;
     padding: 10px;
     width: 55%;
     background-color: #f87171;
@@ -215,7 +220,6 @@
     flex-direction: column;
     width: 48%;
     background-color: rgba(33, 33, 33, 0.1);
-    /*overflow: hidden;*/
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -268,3 +272,57 @@
     height: 70vh;
 }
 
+.home-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    background-color: grey;
+    background-image: url("img/background/home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.home-view-info {
+    background-color: gray;
+    margin: 0 auto;
+    width: 85%;
+    opacity: 0.8;
+}
+
+.home-view-info h5 {
+    margin: 0;
+    padding: 10px 5px;
+}
+
+.home-view-form-h6, .home-view-form-h6-second {
+    margin: 0 auto 35px;
+    width: 55%;
+    padding: 5px;
+    background-color: chocolate;
+    opacity: 0.8;
+}
+
+.home-view-form-h6-second {
+    margin-bottom: 10px;
+}
+
+.home-view label {
+    font-weight: normal;
+    margin: 0 auto 10px;
+    width: 45%;
+    padding: 5px;
+    background-color: chocolate;
+    opacity: 0.9;
+}
+
+.home-view-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-view-form-button {
+    margin-top: 25px;
+    opacity: 0.9;
+}
