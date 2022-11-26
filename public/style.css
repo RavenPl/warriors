@@ -1,3 +1,8 @@
+body {
+    background-image: url("img/background/main.jpg");
+    background-color: grey;
+}
+
 .container {
     text-align: center;
 }
@@ -15,6 +20,7 @@
     align-items: center;
     width: 100%;
     padding: 20px;
+    font-size: 14px;
 }
 
 .wins-stats-container {
@@ -117,10 +123,11 @@
 }
 
 .red, .green {
-    margin: 40px auto;
-    padding: 20px;
-    width: 60%;
+    margin: 0 auto;
+    padding: 10px;
+    width: 55%;
     background-color: #f87171;
+    opacity: 0.7;
     border: 1px solid black;
 }
 
@@ -129,9 +136,20 @@
 }
 
 .top-ten {
-    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
     padding: 15px 0;
-    background-color: #e4e4e7;
+}
+
+.top-ten-warrior {
+    background-color: rgba(80, 80, 80, 0.5);
+    width: 60%;
+}
+
+.row h5 {
+    padding-top: 45px;
 }
 
 .error {
@@ -146,4 +164,170 @@
     color: black;
     font-size: 20px;
     padding: 20px;
+}
+
+.text-arena {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+
+}
+
+.warrior-first, .warrior-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    margin: 5px;
+}
+
+.warrior-first, .warrior-first-log {
+    background-color: #bb9457;
+}
+
+.warrior-second, .warrior-second-log {
+    background-color: #c37d92;
+}
+
+.warrior-image {
+    height: 260px;
+    width: 200px;
+    margin: 20px 0;
+}
+
+.icon-stats {
+    height: 20px;
+    width: 20px;
+}
+
+.icon-log {
+    height: 20px;
+    width: 20px;
+}
+
+.warrior-stats {
+    padding: 5px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.battle-logs {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(33, 33, 33, 0.5);
+    margin: 5px 0;
+}
+
+.log {
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.hidden-log {
+    display: none;
+}
+
+.fightBtn {
+    margin: 20px auto 0;
+    order: 1;
+    width: 30%;
+    color: white;
+    background-color: grey;
+}
+
+.warrior-dead {
+    background-color: red;
+}
+
+.warrior-wins {
+    background-color: gold;
+}
+
+.create-warrior-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    background-image: url("img/background/create-warrior.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.create-warrior-view label {
+    background-color: rgba(156, 163, 175, 0.8);
+    border-radius: 4px;
+}
+
+.hall-of-fame-view {
+    background-image: url("img/background/hall-of-fame.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+.home-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    background-color: grey;
+    background-image: url("img/background/home.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.home-view-info {
+    background-color: gray;
+    margin: 0 auto;
+    width: 85%;
+    opacity: 0.8;
+}
+
+.home-view-info h5 {
+    margin: 0;
+    padding: 10px 5px;
+}
+
+.home-view-form-h6, .home-view-form-h6-second {
+    margin: 0 auto 35px;
+    width: 55%;
+    padding: 5px;
+    background-color: chocolate;
+    opacity: 0.8;
+}
+
+.home-view-form-h6-second {
+    margin-bottom: 10px;
+}
+
+.home-view label {
+    font-weight: normal;
+    margin: 0 auto 10px;
+    width: 45%;
+    padding: 5px;
+    background-color: chocolate;
+    opacity: 0.9;
+}
+
+.home-view-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-view-form-button {
+    margin-top: 25px;
+    opacity: 0.9;
+}
+
+.warrior-start {
+    background-color: cadetblue;
 }

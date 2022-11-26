@@ -1,42 +1,46 @@
 <div class="container">
+    <div class="home-view">
 
-    <div style="margin: 50px 0">
-        <h4>Welcome to the Warriors Game!</h4>
-        <h5>Choose your players!</h5>
+        <div class="home-view-info">
+            <h5>Welcome to the Warriors Game!</h5>
+        </div>
+
+        <div class="home-view-form">
+            <form action="/warriors/arena" method="GET">
+                <h6 class="home-view-form-h6">Select your warrior!</h6>
+                <div class="row" style="margin-bottom: 50px;">
+                    <div class="five columns offset-by-one">
+                        <label for="id1">Warrior 1</label>
+                        <select class="u-full-width" name="id1" id="id1">
+                            {{#each names}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="five columns offset-by-one">
+                        <label for="id2">Warrior 2</label>
+                        <select class="u-full-width" name="id2" id="id2">
+                            {{#each names}}
+                                <option value="{{this.id}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <h6 class="home-view-form-h6-second ">Select game type</h6>
+                    <select name="gameType">
+                        <option value="arena">Arcade</option>
+                        <option value="text">TextOnly</option>
+                    </select>
+                </div>
+                <input
+                        style="width: 40%; "
+                        class="button-primary home-view-form-button"
+                        type="submit"
+                        value="Fight!"
+                >
+            </form>
+        </div>
+
     </div>
-
-    <form style="margin-top: 100px" action="/warriors/arena" method="GET">
-
-        <div class="row" style="margin-bottom: 50px;">
-            <div class="five columns offset-by-one">
-                <label for="id1">Warrior 1</label>
-                <select class="u-full-width" name="id1" id="id1">
-                    {{#each names}}
-                        <option value="{{this.id}}">{{this.name}}</option>
-                    {{/each}}
-                </select>
-            </div>
-            <div class="five columns offset-by-one">
-                <label for="id2">Warrior 2</label>
-                <select class="u-full-width" name="id2" id="id2">
-                    {{#each names}}
-                        <option value="{{this.id}}">{{this.name}}</option>
-                    {{/each}}
-                </select>
-            </div>
-        </div>
-        <p>Select game type</p>
-        <div>
-            <select name="gameType" id="">
-                <option value="arena">Arcade</option>
-                <option value="text">TextOnly</option>
-            </select>
-        </div>
-        <input
-                style="width: 40%; margin-top: 50px"
-                class="button-primary"
-                type="submit"
-                value="Fight!"
-        >
-    </form>
 </div>
