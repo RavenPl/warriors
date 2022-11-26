@@ -7,7 +7,7 @@ type GetAllWarriorsType = [WarriorRecord[], FieldPacket[]];
 
 export class WarriorRecord {
 
-    public id?: string;
+    public id: string = "";
     public victories = 0;
     private readonly totalPoints = 10;
 

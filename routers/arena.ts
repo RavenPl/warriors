@@ -1,23 +1,29 @@
 import {Router} from "express";
 import {WarriorRecord} from "../modules/warrior.record";
 import {ErrorValidation} from "../utils/error";
-
+import {ArenaRecord} from "../modules/arena.record";
 
 export const arenaRouter = Router();
 
 arenaRouter
     .get('/', async (req, res) => {
 
-        const {id1, id2, gameType} = req.query;
+            const {id1, id2, gameType} = req.query;
 
-        if (id1 === id2) {
-            throw new ErrorValidation(`You can't choose the same warrior!`)
-        }
+            if (id1 === id2) {
+                    throw new ErrorValidation(`You can't choose the same warrior!`)
+            }
 
-        const warrior1 = await WarriorRecord.getOne(id1 as string);
-        const warrior2 = await WarriorRecord.getOne(id2 as string);
-        // const area = new AreaRecord(warrior1, warrior2);
-        // const winner = area.fight();
+            const warrior1 = await WarriorRecord.getOne(id1 as string);
+            const warrior2 = await WarriorRecord.getOne(id2 as string);
 
-        res.render(`${gameType}`, {warrior1, warrior2})
+            const war1 = {...warrior1};
+            const war2 = {...warrior2};
+
+            const arena = new ArenaRecord(warrior1, warrior2);
+            const winner = arena.fight();
+            const fightLogs = arena.logs;
+            await WarriorRecord.updateVictories(winner.id, winner.victories + 1)
+
+            res.render(gameType === "arena" ? "arena" : "text-arena", {war1, war2, fightLogs})
     })
