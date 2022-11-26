@@ -168,20 +168,18 @@ body {
 
 .text-arena {
     display: flex;
-    flex-wrap: wrap;
-    height: 80vh;
-    /*overflow: hidden;*/
-    /*background-image: url('/img/arena.png');*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*gap: 5%;*/
+    flex-wrap: nowrap;
+    background-color: white;
+
 }
 
 .warrior-first, .warrior-second {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     width: 25%;
+    margin: 5px;
 }
 
 .warrior-first, .warrior-first-log {
@@ -215,13 +213,14 @@ body {
 }
 
 .battle-logs {
-    height: 70vh;
     display: flex;
     flex-direction: column;
-    width: 48%;
-    background-color: rgba(33, 33, 33, 0.1);
+    height: 70vh;
+    width: 50%;
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: rgba(33, 33, 33, 0.5);
+    margin: 5px 0;
 }
 
 .log {
@@ -234,10 +233,12 @@ body {
     display: none;
 }
 
-.showBtn {
+.fightBtn {
     margin: 20px auto 0;
     order: 1;
     width: 30%;
+    color: white;
+    background-color: grey;
 }
 
 .warrior-dead {
@@ -325,4 +326,8 @@ body {
 .home-view-form-button {
     margin-top: 25px;
     opacity: 0.9;
+}
+
+.warrior-start {
+    background-color: cadetblue;
 }
