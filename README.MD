@@ -16,7 +16,12 @@
 
 # :star2: About the Project
 
-*
+* a little game written using JavaScript, TypeScript and Handlebars
+* 2 types of game:
+  - text only
+  - arcade type, where 2 players can fight with each other
+* you can create your own warrior and him to the rooster
+* you can check your win stats in the hall of fame
 
 ## :space_invader: Tech Stack
 
@@ -79,7 +84,7 @@ This project uses npm as package manager
 Clone the project
 
 ```bash  
- git clone https://github.com/RavenPl/MyLibrary-v3-FE.git
+ git clone https://github.com/RavenPl/warriors
 ```  
 
 Go to the project directory
