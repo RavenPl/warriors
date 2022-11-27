@@ -7,7 +7,6 @@ import {hallOfFameRouter} from "./routers/hall-of-fame";
 import {homeRouter} from "./routers/home";
 import {arenaRouter} from "./routers/arena";
 import {createWarriorRouter} from "./routers/create-warrior";
-import {handlebarsHelpers} from "./utils/helpers";
 
 const app = express()
 
@@ -15,7 +14,6 @@ app.use(json());
 app.use(express.static(__dirname + '/public'));
 app.engine('.hbs', engine({
     extname: '.hbs',
-    helpers: handlebarsHelpers,
 }));
 app.use(urlencoded({
     extended: true,

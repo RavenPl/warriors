@@ -12,7 +12,7 @@ let player1Wins = 0;
 let player2Wins = 0;
 let endOfGame = false;
 let tie = false;
-let time = 15;
+let time = 30;
 
 canvas.width = 1024;
 canvas.height = 576;
@@ -207,10 +207,6 @@ export function fightTimer() {
 
 fightTimer()
 
-/* tworzymy petlę animacji. dajac animate() do funkcji window.requestAnimationFrame() tworzymy petle
-animacji
-
-* */
 function animate() {
     window.requestAnimationFrame(animate);
     context.fillStyle = 'black';
@@ -222,9 +218,6 @@ function animate() {
 
     player.velocity.x = 0;
     enemy.velocity.x = 0;
-
-    // player1 movement
-
 
     if (keys.a.pressed && player.lastKey === 'a') {
         player.velocity.x = -3;
@@ -242,11 +235,9 @@ function animate() {
         player.switchSprite('fall');
     }
 
-    // player2 movement
     if (keys.ArrowLeft.pressed && enemy.lastKey === 'ArrowLeft') {
         enemy.velocity.x = -3;
         enemy.switchSprite('run');
-
     } else if (keys.ArrowRight.pressed && enemy.lastKey === 'ArrowRight') {
         enemy.velocity.x = 3;
         enemy.switchSprite('run');
@@ -254,13 +245,13 @@ function animate() {
     } else {
         enemy.switchSprite('idle');
     }
+
     if (enemy.velocity.y < 0) {
         enemy.switchSprite('jump');
     } else if (enemy.velocity.y > 0) {
         enemy.switchSprite('fall');
     }
 
-    // detecting collisions
     if (
         rectangleCollision(player, enemy) &&
         player.isAttacking &&
@@ -271,7 +262,6 @@ function animate() {
         player.isAttacking = false;
     }
 
-    // missing collision
     if (player.isAttacking && player.framesCurr === 4) {
         player.isAttacking = false;
     }
@@ -288,7 +278,6 @@ function animate() {
     if (enemy.isAttacking && enemy.framesCurr === 2) {
         enemy.isAttacking = false;
     }
-// sprawdzanie kto wygral gdy zycie jest ponizej 0
 
     if (player.health <= 0 || enemy.health <= 0) {
         whoWins(player, enemy, idInterval);

@@ -7,6 +7,8 @@ body {
     text-align: center;
 }
 
+/*arcade arena styles*/
+
 .canvas-container {
     position: relative;
     margin: 0 auto;
@@ -105,9 +107,9 @@ body {
 }
 
 .playerOne-armor-bar, .playerTwo-armor-bar {
-    background-color: yellow;
     width: 100%;
     height: 100%;
+    background-color: yellow;
 }
 
 .resultInfo {
@@ -120,6 +122,25 @@ body {
     align-items: center;
     display: none;
     color: white;
+}
+
+/*create-warrior styles*/
+
+.create-warrior-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    background-image: url("img/background/create-warrior.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.create-warrior-view label {
+    background-color: rgba(156, 163, 175, 0.8);
+    border-radius: 4px;
 }
 
 .red, .green {
@@ -135,6 +156,15 @@ body {
     background-color: #a3e635;
 }
 
+/*hall-of-fame view*/
+
+.hall-of-fame-view {
+    background-image: url("img/background/hall-of-fame.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
 .top-ten {
     display: flex;
     flex-direction: column;
@@ -148,9 +178,11 @@ body {
     width: 60%;
 }
 
-.row h5 {
+.hall-of-fame-view h5 {
     padding-top: 45px;
 }
+
+/*error styles*/
 
 .error {
     display: flex;
@@ -166,11 +198,12 @@ body {
     padding: 20px;
 }
 
+/*text-arena styles*/
+
 .text-arena {
     display: flex;
     flex-wrap: nowrap;
     background-color: white;
-
 }
 
 .warrior-first, .warrior-second {
@@ -249,47 +282,29 @@ body {
     background-color: gold;
 }
 
-.create-warrior-view {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 70vh;
-    background-image: url("img/background/create-warrior.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.warrior-start {
+    background-color: cadetblue;
 }
 
-.create-warrior-view label {
-    background-color: rgba(156, 163, 175, 0.8);
-    border-radius: 4px;
-}
-
-.hall-of-fame-view {
-    background-image: url("img/background/hall-of-fame.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 70vh;
-}
+/*home-view styles*/
 
 .home-view {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 70vh;
-    background-color: grey;
     background-image: url("img/background/home.jpg");
+    background-color: grey;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
+    height: 70vh;
 }
 
 .home-view-info {
-    background-color: gray;
     margin: 0 auto;
     width: 85%;
     opacity: 0.8;
+    background-color: gray;
 }
 
 .home-view-info h5 {
@@ -310,12 +325,12 @@ body {
 }
 
 .home-view label {
-    font-weight: normal;
     margin: 0 auto 10px;
-    width: 45%;
     padding: 5px;
-    background-color: chocolate;
+    width: 45%;
     opacity: 0.9;
+    background-color: chocolate;
+    font-weight: normal;
 }
 
 .home-view-form {
@@ -326,8 +341,4 @@ body {
 .home-view-form-button {
     margin-top: 25px;
     opacity: 0.9;
-}
-
-.warrior-start {
-    background-color: cadetblue;
 }
