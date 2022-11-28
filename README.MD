@@ -54,15 +54,14 @@
 
 ## :dart: Features
 
-- make your own warrior and decide which skills to improve :heavy_check_mark:
-  <br>
+- create your own warrior and decide which skills to improve :heavy_check_mark:   <br>
   <img src="./utils/images/create-warrior.jpg"/>
 - select your warrior, and a game type :heavy_check_mark:
   <br>
   <img src="./utils/images/home.jpg"/>
-- fight against your opponent in 2d game type :heavy_check_mark:
-  <br>
+- fight against your opponent in 2d game type :heavy_check_mark:   <br>
   <img src="./utils/images/arena.jpg"/>
+  <hr>
   <img src="./utils/images/arena-death.jpg"/>
 
 - deleting specific one or all at once :heavy_check_mark:
