@@ -71,11 +71,37 @@
 
 # :toolbox: Getting Started
 
+### :key: Environment Variables
+
+In order to run this app you need to create config.ts and place it in config folder. File should contain following
+fields with your correct data, for instance:
+
+```json  
+const config = {  
+    dbHost: 'localhost',  
+    dbUser: 'user',  
+    dbDatabase: 'yourDatabaseName',
+}
+```
+
 <!-- Prerequisites -->  
 
 ### :bangbang: Prerequisites
 
-This project uses npm as package manager
+You have to create your database by using this SQL:
+
+```
+CREATE TABLE IF NOT EXISTS `warriors` (
+`id` varchar(36) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT uuid(),
+`name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+`healPoints` int(2) DEFAULT NULL,
+`strength` int(2) DEFAULT NULL,
+`defence` int(2) DEFAULT NULL,
+`agility` int(2) DEFAULT NULL,
+`victories` int(2) NOT NULL DEFAULT 0,
+PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+```
 
 ```bash  
  npm install --global npm  
@@ -94,7 +120,7 @@ Clone the project
 Go to the project directory
 
 ```bash  
- cd my-library-FE  
+ cd Warriors 
 ```  
 
 Install dependencies
@@ -113,9 +139,14 @@ Start the server
 
 # :eyes: Usage
 
-1. Make sure backend is listening and database is implemented correctly, also please check cors settings in express
-   repository!
-2. Link to backend repository [_link_](https://github.com/RavenPl/MyLibrary-v3-BE).
+1. Arcade game controls:
+
+* player 1: A,D - left and right; SPACE for hitting
+* player 2: left, right arrow key for movement, down arrow key for hitting
+
+2. Text-only type:
+
+* click fight button to generate fight log
 
 # :hammer_and_wrench: Project Status
 
