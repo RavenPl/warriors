@@ -7,6 +7,7 @@ import {hallOfFameRouter} from "./routers/hall-of-fame";
 import {homeRouter} from "./routers/home";
 import {arenaRouter} from "./routers/arena";
 import {createWarriorRouter} from "./routers/create-warrior";
+import rateLimit from "express-rate-limit";
 
 const app = express()
 
@@ -26,6 +27,10 @@ app.use('/warriors', homeRouter);
 app.use('/warriors/arena', arenaRouter);
 app.use('/warriors/hall-of-fame', hallOfFameRouter);
 app.use('/warriors/create', createWarriorRouter);
+app.use(rateLimit({
+    windowMs: 5 * 60 * 1000,
+    max: 100,
+}));
 
 app.use(handleError);
 
