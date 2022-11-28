@@ -13,7 +13,6 @@
       "es6",
       "dom.iterable",
       "DOM",
-      "dom"
     ],
     "outDir": "dist",
     "experimentalDecorators": true,
