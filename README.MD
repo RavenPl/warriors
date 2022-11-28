@@ -16,7 +16,7 @@
 
 # :star2: About the Project
 
-* a little game written using JavaScript, TypeScript and Handlebars
+* a little game written using JavaScript, TypeScript, Handlebars and Canvas
 * 2 types of game:
   - text only
   - arcade type, where 2 players can fight with each other
@@ -28,9 +28,11 @@
 <details>  
   <summary>Client</summary>  
   <ul>  
-    <li>Handlebars</li>  
     <li>JavaScript</li>
+    <li>HTML Canvas</li>
+    <li>Handlebars</li>  
     <li>Skeleton</li>
+
   </ul>  
 </details>  
 <details>  
@@ -52,10 +54,10 @@
 
 ## :dart: Features
 
-- general view <br>
-  <img src="./src/utils/images/mainView.jpg"/>
-- adding a new book to the list :heavy_check_mark: <br>
-  <img src="./src/utils/images/addingBook.jpg"/>
+- create-warrior view where you can make your warrior :heavy_check_mark: <br>
+  <img src="./utils/images/create-warrior.jpg"/>
+- select your warrior and game type :heavy_check_mark: <br>
+  <img src="./utils/images/home.jpg"/>
 - editing existing ones :heavy_check_mark: <br>
   <img src="./src/utils/images/editBook.jpg"/>
 - deleting specific one or all at once :heavy_check_mark:
