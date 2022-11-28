@@ -20,7 +20,7 @@
 * 2 types of game:
   - text only
   - arcade type, where 2 players can fight with each other
-* you can create your own warrior and him to the rooster
+* you can create your own warrior and add him to the rooster
 * you can check your win stats in the hall of fame
 
 ## :space_invader: Tech Stack
@@ -147,7 +147,3 @@ Start the server
 2. Text-only type:
 
 * click fight button to generate fight log
-
-# :hammer_and_wrench: Project Status
-
-The project is closed. Next version will be with Nest framework.
