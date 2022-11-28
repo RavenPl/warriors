@@ -20,14 +20,16 @@ arenaRouter
         const war1 = {...warrior1};
         const war2 = {...warrior2};
 
-        if (gameType === "text-arena") {
+        if (gameType === "text") {
             const arena = new ArenaRecord(warrior1, warrior2);
             const winner = arena.fight();
             const fightLogs = arena.logs;
             await WarriorRecord.updateVictories(winner.id, winner.victories + 1);
 
             res.render("text-arena", {war1, war2, fightLogs})
+        } else {
+
+            res.render("arena", {war1, war2})
         }
 
-        res.render("arena", {war1, war2})
     })

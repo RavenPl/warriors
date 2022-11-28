@@ -54,22 +54,20 @@
 
 ## :dart: Features
 
-- create your own warrior and decide which skills to improve :heavy_check_mark:   <br>
+- create your own warrior and decide which skills to improve :heavy_check_mark: <br>
   <img src="./utils/images/create-warrior.jpg"/>
-- select your warrior, and a game type :heavy_check_mark:
-  <br>
+- select your warrior, and a game type :heavy_check_mark: <br>
   <img src="./utils/images/home.jpg"/>
-- fight against your opponent in 2d game type :heavy_check_mark:   <br>
+- fight against your opponent in 2d game :heavy_check_mark: <br>
   <img src="./utils/images/arena.jpg"/>
   <hr>
   <img src="./utils/images/arena-death.jpg"/>
-
-- deleting specific one or all at once :heavy_check_mark:
-- you can search your book by title or by author name :heavy_check_mark: <br>
-  <img src="./src/utils/images/searchByAuthor.jpg"/> <hr>
-  <img src="./src/utils/images/searchByTitle.jpg"/>
-- you can list your positions by title, author, page number or by status :heavy_check_mark: <br>
-  <img src="./src/utils/images/orderByAuthor.jpg"/>
+- watch the fight in text mode :heavy_check_mark:
+  <img src="./utils/images/text-arena.jpg"/>
+  <hr>
+  <img src="./utils/images/text-arena-2.jpg"/>
+- check your results in the hall-of-fame which shows top-10 warriors :heavy_check_mark: <br>
+  <img src="./utils/images/hall-of-fame.jpg"/>
 
 # :toolbox: Getting Started
 
