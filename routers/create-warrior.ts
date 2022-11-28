@@ -32,6 +32,8 @@ createWarriorRouter
 
         const id = req.params.id;
         const winner = await WarriorRecord.getOne(id);
+        console.log('wiiner', winner);
+
         const updatedVictories = winner.victories
         await WarriorRecord.updateVictories(id, updatedVictories + 1);
 
