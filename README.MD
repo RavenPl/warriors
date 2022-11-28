@@ -54,12 +54,17 @@
 
 ## :dart: Features
 
-- create-warrior view where you can make your warrior :heavy_check_mark: <br>
+- make your own warrior and decide which skills to improve :heavy_check_mark:
+  <br>
   <img src="./utils/images/create-warrior.jpg"/>
-- select your warrior and game type :heavy_check_mark: <br>
+- select your warrior, and a game type :heavy_check_mark:
+  <br>
   <img src="./utils/images/home.jpg"/>
-- editing existing ones :heavy_check_mark: <br>
-  <img src="./src/utils/images/editBook.jpg"/>
+- fight against your opponent in 2d game type :heavy_check_mark:
+  <br>
+  <img src="./utils/images/arena.jpg"/>
+  <img src="./utils/images/arena-death.jpg"/>
+
 - deleting specific one or all at once :heavy_check_mark:
 - you can search your book by title or by author name :heavy_check_mark: <br>
   <img src="./src/utils/images/searchByAuthor.jpg"/> <hr>
