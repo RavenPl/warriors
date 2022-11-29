@@ -2,4 +2,5 @@
 //     dbHost: 'localhost',
 //     dbUser: 'root',
 //     dbDatabase: 'yourDatabaseName',
+//         dbPassword: "password"
 // }
