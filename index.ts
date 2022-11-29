@@ -34,6 +34,6 @@ app.use(rateLimit({
 
 app.use(handleError);
 
-app.listen(3000, 'localhost', () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log('Listening to port 3000. http://localhost:3000/warriors')
 });
