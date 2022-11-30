@@ -21,3 +21,9 @@ hallOfFameRouter
 
         res.render('hall-of-fame', {list});
     })
+
+    .get('/test', async (req, res) => {
+        const [data] = await pool.execute('SELECT * FROM `warriors` ORDER BY `victories` DESC , `name` ASC LIMIT 10 ') as [WarriorRecord[], FieldPacket[]];
+
+        res.json(data)
+    })
