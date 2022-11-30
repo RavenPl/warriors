@@ -65,7 +65,7 @@ export const player = new Warrior({
             framesMax: 7,
         },
         take_hit: {
-            imgSrc: "/img/Warrior1/Take hit.png",
+            imgSrc: "/img/Warrior1/Take_hit.png",
             framesMax: 3,
         },
         death: {
@@ -123,7 +123,7 @@ export const enemy = new Warrior({
             framesMax: 4,
         },
         take_hit: {
-            imgSrc: "/img/Warrior2/Take hit.png",
+            imgSrc: "/img/Warrior2/Take_hit.png",
             framesMax: 3,
         },
         death: {
