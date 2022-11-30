@@ -2,5 +2,7 @@
 //     dbHost: 'localhost',
 //     dbUser: 'root',
 //     dbDatabase: 'yourDatabaseName',
-//         dbPassword: "password"
+//     dbPassword: "password",
+//     corsOrigin: 'http://localhost:3000'
+//
 // }

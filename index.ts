@@ -1,4 +1,5 @@
 import express, {json, urlencoded} from 'express';
+import cors from 'cors';
 import 'express-async-errors';
 import {engine} from "express-handlebars";
 import {handleError} from "./utils/error";
@@ -8,10 +9,14 @@ import {homeRouter} from "./routers/home";
 import {arenaRouter} from "./routers/arena";
 import {createWarriorRouter} from "./routers/create-warrior";
 import rateLimit from "express-rate-limit";
+import {config} from "./config/config";
 
 const app = express()
 
 app.use(json());
+app.use(cors({
+    origin: config.corsOrigin,
+}));
 app.use(express.static(__dirname + '/public'));
 app.engine('.hbs', engine({
     extname: '.hbs',
