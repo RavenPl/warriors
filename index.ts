@@ -1,4 +1,4 @@
-import express, {json, Router, urlencoded} from 'express';
+import express, {json, urlencoded} from 'express';
 import 'express-async-errors';
 import {engine} from "express-handlebars";
 import {handleError} from "./utils/error";
@@ -26,15 +26,11 @@ app.use(rateLimit({
     windowMs: 5 * 60 * 1000,
     max: 100,
 }));
+app.use('/warriors', homeRouter);
+app.use('/warriors/arena', arenaRouter);
+app.use('/warriors/hall-of-fame', hallOfFameRouter);
+app.use('/warriors/create', createWarriorRouter);
 
-const router = Router();
-
-router.use('/warriors', homeRouter);
-router.use('/warriors/arena', arenaRouter);
-router.use('/warriors/hall-of-fame', hallOfFameRouter);
-router.use('/warriors/create', createWarriorRouter);
-
-app.use('/api', router);
 
 app.use(handleError);
 
