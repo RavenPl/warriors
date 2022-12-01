@@ -1,18 +1,16 @@
 import {Router} from "express";
 import {WarriorRecord} from "../modules/warrior.record";
 
-export const warriorRouter = Router();
+export const createWarriorRouter = Router();
 
-warriorRouter
+createWarriorRouter
 
-    .get('/', async (req, res) => {
-        // console.log(await WarriorRecord.getAll());
+    .get('/', (req, res) => {
 
-        res.render('create-form')
+        res.render('create-warrior');
     })
 
     .post('/add', async (req, res) => {
-
 
         const {name, healPoints, strength, defence, agility} = req.body as WarriorRecord;
 
@@ -23,12 +21,20 @@ warriorRouter
             Number(healPoints),
             Number(agility)
         );
-        console.log(newWarrior);
 
         await WarriorRecord.hasName(name);
-        // newWarrior.totalPointsValidator();
-        console.log(newWarrior);
         await newWarrior.insert();
 
-        res.end()
+        res.redirect('/warriors')
+    })
+
+    .patch('/:id', async (req, res) => {
+
+        const id = req.params.id;
+        const winner = await WarriorRecord.getOne(id);
+
+        const updatedVictories = winner.victories
+        await WarriorRecord.updateVictories(id, updatedVictories + 1);
+
+        res.end();
     })

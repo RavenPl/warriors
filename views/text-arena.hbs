@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="text-arena">
+        <div class="warrior-first">
+            <img class="warrior-image" src="/img/image1.jpg">
+            <h6 class="warrior-stats">{{war1.name}}</h6>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/heart.png"> Health: {{war1.healPoints}}
+            </p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/sword.png"> Attack: {{war1.strength}} </p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/armor.png"> Defence: {{war1.defence}}</p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/running.png"> Agility: {{war1.agility}}</p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/trophy.png"> Victories: {{war1.victories}}
+            </p>
+        </div>
+        <div class="battle-logs">
+            {{#each fightLogs}}
+
+                <span class="log hidden-log {{this.warrior}}">
+                    <div>
+                    <img class="icon-log" src="/img/icons/{{this.iconFirst}}.png">
+                    <img class="icon-log" src="/img/icons/{{this.iconSecond}}.png">
+                    </div>
+                    {{this.text}}
+                </span>
+            {{/each}}
+        </div>
+        <div class="warrior-second">
+            <img class="warrior-image" src="/img/image2.jpg">
+            <h6 class="warrior-stats">{{war2.name}}</h6>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/heart.png"> Health: {{war2.healPoints}}
+            </p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/sword.png"> Attack: {{war2.strength}} </p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/armor.png"> Defence: {{war2.defence}}</p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/running.png"> Agility: {{war2.agility}}</p>
+            <p class="warrior-stats"><img class="icon-stats" src="/img/icons/trophy.png"> Victories: {{war2.victories}}
+            </p>
+        </div>
+    </div>
+    <button class="fightBtn">Fight!</button>
+</div>

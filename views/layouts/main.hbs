@@ -5,25 +5,37 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
-
-    <!--    <link rel="stylesheet" type="text/css" href="/../../public/normalize.css">-->
-    <!--    <link rel="stylesheet" type="text/css" href="/../../public/skeleton.css">-->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
     <title>Warriors</title>
 </head>
 <body>
 <div class="container">
-
-    <div class="row">
-
-        <a class="button button-primary four columns" href="/warrior">Create a warrior!</a>
-        <a class="button button-primary four columns" href="#">Fight!</a>
-        <a class="button button-primary four columns" href="/hall-of-fame">Hall of Fame!</a>
+    <div class="menu">
+        <div class="row menu-row" style="margin-top: 40px">
+            <a class="button button-primary four columns" href="/warriors/create">Create a warrior!</a>
+            <a class="button button-primary four columns" href="/warriors">Home</a>
+            <a class="button button-primary four columns" href="/warriors/hall-of-fame">Hall of Fame!</a>
+        </div>
+        <hr>
 
     </div>
-    <hr>
-    {{{body}}}
+
 </div>
+{{{body}}}
+<script src="/index.js" type="module"></script>
+<script src="/text-arena.js" type="module"></script>
 
 </body>
 </html>

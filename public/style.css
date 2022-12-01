@@ -1,0 +1,344 @@
+body {
+    background-image: url("img/background/main.jpg");
+    background-color: grey;
+}
+
+.container {
+    text-align: center;
+}
+
+/*arcade arena styles*/
+
+.canvas-container {
+    position: relative;
+    margin: 0 auto;
+    width: 1024px;
+}
+
+.stats {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.wins-stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+.playerOne-health-bar-container, .playerTwo-health-bar-container {
+    position: relative;
+    display: flex;
+    width: 45%;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    background-color: rgba(255, 0, 0, 0.7);
+}
+
+.playerOne-health-bar-container {
+    border-left: 3px solid white;
+}
+
+.playerTwo-health-bar-container {
+    justify-content: flex-end;
+    border-right: 3px solid white;
+}
+
+.playerOne-health-bar, .playerTwo-health-bar {
+    width: 100%;
+    height: 30px;
+    background-color: #0100DF;
+}
+
+.playerOne-name-holder, .playerTwo-name-holder {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.playerOne-name-holder {
+    left: 5%;
+}
+
+.playerTwo-name-holder {
+    right: 5%;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    height: 50px;
+    width: 10%;
+    border: 3px solid white;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+}
+
+.armor-stats-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.playerOne-armor-bar-container, .playerTwo-armor-bar-container {
+    width: 100px;
+    height: 10px;
+    border: 3px solid black;
+    background-color: transparent;
+}
+
+.playerTwo-armor-bar-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.playerOne-armor-bar, .playerTwo-armor-bar {
+    width: 100%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.resultInfo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    color: white;
+}
+
+/*create-warrior styles*/
+
+.create-warrior-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    background-image: url("img/background/create-warrior.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.create-warrior-view label {
+    background-color: rgba(156, 163, 175, 0.8);
+    border-radius: 4px;
+}
+
+.red, .green {
+    margin: 0 auto;
+    padding: 10px;
+    width: 55%;
+    background-color: #f87171;
+    opacity: 0.7;
+    border: 1px solid black;
+}
+
+.green {
+    background-color: #a3e635;
+}
+
+/*hall-of-fame view*/
+
+.hall-of-fame-view {
+    background-image: url("img/background/hall-of-fame.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+}
+
+.top-ten {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 15px 0;
+}
+
+.top-ten-warrior {
+    background-color: rgba(80, 80, 80, 0.5);
+    width: 60%;
+}
+
+.hall-of-fame-view h5 {
+    padding-top: 45px;
+}
+
+/*error styles*/
+
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #e77b7b;
+    border: 2px solid black;
+    width: 80%;
+    height: 200px;
+    margin: 0 auto;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+}
+
+/*text-arena styles*/
+
+.text-arena {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: white;
+}
+
+.warrior-first, .warrior-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 25%;
+    margin: 5px;
+}
+
+.warrior-first, .warrior-first-log {
+    background-color: #bb9457;
+}
+
+.warrior-second, .warrior-second-log {
+    background-color: #c37d92;
+}
+
+.warrior-image {
+    height: 260px;
+    width: 200px;
+    margin: 20px 0;
+}
+
+.icon-stats {
+    height: 20px;
+    width: 20px;
+}
+
+.icon-log {
+    height: 20px;
+    width: 20px;
+}
+
+.warrior-stats {
+    padding: 5px;
+    margin: 0;
+    font-size: 14px;
+}
+
+.battle-logs {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 50%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgba(33, 33, 33, 0.5);
+    margin: 5px 0;
+}
+
+.log {
+    padding: 5px;
+    margin: 5px;
+    font-size: 10px;
+}
+
+.hidden-log {
+    display: none;
+}
+
+.fightBtn {
+    margin: 20px auto 0;
+    order: 1;
+    width: 30%;
+    color: white;
+    background-color: grey;
+}
+
+.warrior-dead {
+    background-color: red;
+}
+
+.warrior-wins {
+    background-color: gold;
+}
+
+.warrior-start {
+    background-color: cadetblue;
+}
+
+/*home-view styles*/
+
+.home-view {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url("img/background/home.jpg");
+    background-color: grey;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    height: 70vh;
+}
+
+.home-view-info {
+    margin: 0 auto;
+    width: 85%;
+    opacity: 0.8;
+    background-color: gray;
+}
+
+.home-view-info h5 {
+    margin: 0;
+    padding: 10px 5px;
+}
+
+.home-view-form-h6, .home-view-form-h6-second {
+    margin: 0 auto 35px;
+    width: 55%;
+    padding: 5px;
+    background-color: chocolate;
+    opacity: 0.8;
+}
+
+.home-view-form-h6-second {
+    margin-bottom: 10px;
+}
+
+.home-view label {
+    margin: 0 auto 10px;
+    padding: 5px;
+    width: 45%;
+    opacity: 0.9;
+    background-color: chocolate;
+    font-weight: normal;
+}
+
+.home-view-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-view-form-button {
+    margin-top: 25px;
+    opacity: 0.9;
+}

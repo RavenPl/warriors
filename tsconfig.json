@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": false,
     "strict": true,
+    "module": "CommonJS",
     "strictPropertyInitialization": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
@@ -8,8 +11,7 @@
     "target": "es6",
     "downlevelIteration": true,
     "lib": [
-      "es6",
-      "dom.iterable"
+      "es6"
     ],
     "outDir": "dist",
     "experimentalDecorators": true,

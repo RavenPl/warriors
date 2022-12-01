@@ -10,6 +10,6 @@ homeRouter
             const {id, name} = obj;
             return {id, name}
         });
-        console.log(names);
-        res.render('home', {names})
+
+        res.render('home', {names});
     })

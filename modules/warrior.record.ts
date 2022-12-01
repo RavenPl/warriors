@@ -7,7 +7,7 @@ type GetAllWarriorsType = [WarriorRecord[], FieldPacket[]];
 
 export class WarriorRecord {
 
-    public id?: string;
+    public id: string = "";
     public victories = 0;
     private readonly totalPoints = 10;
 
@@ -34,7 +34,7 @@ export class WarriorRecord {
     static async hasName(name: string) {
         const warriorsNames = (await this.getAll()).map(obj => obj.name.toLowerCase());
         if (warriorsNames.includes(name.toLowerCase())) {
-            throw new ErrorValidation(`The name you used - ${name} is already taken!`);
+            throw new ErrorValidation(`The name you used - ${name} - is already taken!`);
         }
     }
 
@@ -52,6 +52,13 @@ export class WarriorRecord {
         })) as GetAllWarriorsType;
 
         return found[0]
+    }
+
+    static async updateVictories(id: string, wins: number) {
+        await pool.execute('UPDATE `warriors` SET `victories` = :wins WHERE `id` = :id', {
+            id,
+            wins,
+        })
     }
 
     totalPointsValidator(): void {

@@ -8,7 +8,7 @@ export const hallOfFameRouter = Router();
 hallOfFameRouter
     .get('/', async (req, res) => {
 
-        const [data] = await pool.execute('SELECT * FROM `warriors` ORDER BY `victories` DESC LIMIT 10') as [WarriorRecord[], FieldPacket[]];
+        const [data] = await pool.execute('SELECT * FROM `warriors` ORDER BY `victories` DESC , `name` ASC LIMIT 10 ') as [WarriorRecord[], FieldPacket[]];
 
         const list = data.map((obj, i) => {
             const {victories, name} = obj;
@@ -19,6 +19,11 @@ hallOfFameRouter
             }
         });
 
-        res.render('hall-of-fame', {list})
+        res.render('hall-of-fame', {list});
+    })
 
+    .get('/test', async (req, res) => {
+        const [data] = await pool.execute('SELECT * FROM `warriors` ORDER BY `victories` DESC , `name` ASC LIMIT 10 ') as [WarriorRecord[], FieldPacket[]];
+
+        res.json(data)
     })

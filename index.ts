@@ -1,18 +1,25 @@
 import express, {json, urlencoded} from 'express';
+import cors from 'cors';
 import 'express-async-errors';
-import {warriorRouter} from "./routers/warrior";
-import {hallOfFameRouter} from "./routers/hall-of-fame";
 import {engine} from "express-handlebars";
-import {homeRouter} from "./routers/home";
 import {handleError} from "./utils/error";
+
+import {hallOfFameRouter} from "./routers/hall-of-fame";
+import {homeRouter} from "./routers/home";
 import {arenaRouter} from "./routers/arena";
+import {createWarriorRouter} from "./routers/create-warrior";
+import rateLimit from "express-rate-limit";
+import {config} from "./config/config";
 
 const app = express()
 
 app.use(json());
+app.use(cors({
+    origin: config.corsOrigin,
+}));
 app.use(express.static(__dirname + '/public'));
 app.engine('.hbs', engine({
-    extname: '.hbs'
+    extname: '.hbs',
 }));
 app.use(urlencoded({
     extended: true,
@@ -20,14 +27,18 @@ app.use(urlencoded({
 
 app.set('view engine', '.hbs');
 app.set('views', './views');
+app.use(rateLimit({
+    windowMs: 5 * 60 * 1000,
+    max: 100,
+}));
+app.use('/warriors', homeRouter);
+app.use('/warriors/arena', arenaRouter);
+app.use('/warriors/hall-of-fame', hallOfFameRouter);
+app.use('/warriors/create', createWarriorRouter);
 
-app.use('/', homeRouter);
-app.use('/arena', arenaRouter);
-app.use('/hall-of-fame', hallOfFameRouter);
-app.use('/warrior', warriorRouter);
 
 app.use(handleError);
 
-app.listen(3000, 'localhost', () => {
-    console.log('Listening to port 3000. http://localhost:3000')
+app.listen(3000, '0.0.0.0', () => {
+    console.log('Listening to port 3000. http://localhost:3000/warriors')
 });
