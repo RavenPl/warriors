@@ -12,7 +12,7 @@
     * [Prerequisites](#bangbang-prerequisites)
     * [Run Locally](#running-run-locally)
 - [Usage](#eyes-usage)
-- [Project Status](#hammer_and_wrench-project-status)
+- [Acknowledgements](#gem-acknowledgements)
 
 # :star2: About the Project
 
@@ -132,7 +132,7 @@ Install dependencies
 Start the server
 
 ```bash  
- npm start  
+ npm run start:dev
 ```  
 
 <!-- Usage -->  
@@ -147,3 +147,32 @@ Start the server
 2. Text-only type:
 
 * click fight button to generate fight log
+
+<!-- Acknowledgments -->
+
+## :gem: Acknowledgements
+
+Used readme template:
+
+- [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template)
+
+Used icons:
+
+* <a href="https://www.flaticon.com/free-icons/armor" title="armor icons">Armor icons created by Nikita Golubev -
+  Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by pongsakornRed -
+  Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/sword" title="sword icons">Sword icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/pixel" title="pixel icons">Pixel icons created by Futuer - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/sport" title="sport icons">Sport icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/death" title="death icons">Death icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/award" title="award icons">Award icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/shield" title="shield icons">Shield icons created by Parzival’ 1997 -
+  Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/gaming" title="gaming icons">Gaming icons created by Freepik -
+  Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/blood" title="blood icons">Blood icons created by srip - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/dead" title="dead icons">Dead icons created by srip - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/win" title="win icons">Win icons created by Wichai.wi - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/attack" title="attack icons">Attack icons created by Freepik -
+  Flaticon</a>
