@@ -1,8 +1,8 @@
 <div align="center">  
   <h1>Warriors!</h1>
-<h4>
+<h2>
     <a href="https://warriors.networkmanager.pl/warriors">View Demo</a>
-</h4>
+</h2>
 </div>  
 
 <!-- Table of Contents -->  
@@ -145,12 +145,12 @@ Start the server
 
 1. Arcade game controls:
 
-* player 1: A,D - left and right; SPACE for hitting
-* player 2: left, right arrow key for movement, down arrow key for hitting
+* player 1: A,D - left and right; W - jump; SPACE - hit;
+* player 2: left, right, up arrow keys for movement, down arrow key for hitting;
 
 2. Text-only type:
 
-* click fight button to generate fight log
+* click fight button to generate fight log;
 
 <!-- Acknowledgments -->
 
