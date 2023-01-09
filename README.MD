@@ -156,11 +156,11 @@ Start the server
 
 ## :gem: Acknowledgements
 
-Used readme template:
+**Used readme template:**
 
 - [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template)
 
-Used icons:
+**Used icons:**
 
 * <a href="https://www.flaticon.com/free-icons/armor" title="armor icons">Armor icons created by Nikita Golubev -
   Flaticon</a>
@@ -180,3 +180,7 @@ Used icons:
 * <a href="https://www.flaticon.com/free-icons/win" title="win icons">Win icons created by Wichai.wi - Flaticon</a>
 * <a href="https://www.flaticon.com/free-icons/attack" title="attack icons">Attack icons created by Freepik -
   Flaticon</a>
+  
+**Arcade mode was inspired by youtube tutorial:**
+  
+* <a href="https://www.youtube.com/watch?v=vyqbNFMDRGQ">JavaScript Fighting Game Tutorial - Chris Courses<a/>
