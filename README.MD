@@ -18,6 +18,8 @@
 - [Usage](#eyes-usage)
 - [Acknowledgements](#gem-acknowledgements)
 
+<br/>
+
 # :star2: About the Project
 
 * a little game written using JavaScript, TypeScript, Handlebars and Canvas
@@ -27,7 +29,9 @@
 * you can create your own warrior and add him to the rooster
 * you can check your win stats in the hall of fame
 
-## :space_invader: Tech Stack
+<br/>
+
+# :space_invader: Tech Stack
 
 <details>  
   <summary>Client</summary>  
@@ -56,7 +60,9 @@
 
 <!-- Features -->  
 
-## :dart: Features
+<br/>
+
+# :dart: Features
 
 - create your own warrior and decide which skills to improve :heavy_check_mark: <br>
   <img src="./utils/images/create-warrior.jpg"/>
@@ -72,6 +78,8 @@
   <img src="./utils/images/text-arena-2.jpg"/>
 - check your results in the hall-of-fame which shows top-10 warriors :heavy_check_mark: <br>
   <img src="./utils/images/hall-of-fame.jpg"/>
+
+<br/>
 
 # :toolbox: Getting Started
 
@@ -113,7 +121,9 @@ PRIMARY KEY (`id`)
 
 <!-- Run Locally -->  
 
-## :running: Run Locally
+<br/>
+
+# :running: Run Locally
 
 Clone the project
 
@@ -141,20 +151,31 @@ Start the server
 
 <!-- Usage -->  
 
+<br/>
+
 # :eyes: Usage
 
 1. Arcade game controls:
 
-* player 1: A,D - left and right; W - jump; SPACE - hit;
-* player 2: left, right, up arrow keys for movement, down arrow key for hitting;
+  * player 1: A,D - left and right; W - jump; SPACE - hit;
+  * player 2: left, right, up arrow keys for movement, down arrow key for hitting;
 
 2. Text-only type:
 
-* click fight button to generate fight log;
+  * click fight button to generate fight log;
 
 <!-- Acknowledgments -->
 
-## :gem: Acknowledgements
+<br/>
+
+# :deciduous_tree: Lessons Learned
+
+<p>This project was made to put together HTML, JavaScript, Typescript, Handlebars and DataBase into one, working application.</p>
+<p>It was my first introductin to HTML Canvas. I mainly code along tutorial but I was able to add my own elements. </p>
+
+<br/>
+
+# :gem: Acknowledgements
 
 **Used readme template:**
 
