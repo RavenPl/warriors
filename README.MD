@@ -1,10 +1,10 @@
 <div align="center">  
   <h1>Warriors!</h1>
-<h2>
-    <a href="https://warriors.networkmanager.pl/warriors">View Demo</a>
-</h2>
+  
+  # :video_game: <a href="https://warriors.networkmanager.pl/warriors">View Demo</a>
+  
 </div>  
-
+<br/>
 <!-- Table of Contents -->  
 
 # :notebook_with_decorative_cover: Table of Contents
@@ -13,7 +13,7 @@
     * [Tech Stack](#space_invader-tech-stack)
     * [Features](#dart-features)
 - [Getting Started](#toolbox-getting-started)
-    * [Prerequisites](#bangbang-prerequisites)
+    * [Prerequisites](#heavy_exclamation_mark-prerequisites)
     * [Run Locally](#running-run-locally)
 - [Usage](#eyes-usage)
 - [Acknowledgements](#gem-acknowledgements)
@@ -58,6 +58,20 @@
   </ul>  
 </details>  
 
+## Technology stack
+<p align="left">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> &nbsp; &nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> &nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> &nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> &nbsp;&nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> &nbsp; &nbsp;
+<img src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/express/express.png" alt="express js" height="40"/> &nbsp; &nbsp;
+<img src="https://www.vectorlogo.zone/logos/handlebarsjs/handlebarsjs-ar21.svg" alt="express js" height="40"/> &nbsp; &nbsp;
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> &nbsp; &nbsp;
+<img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/>&nbsp;&nbsp;
+<img src="https://www.vectorlogo.zone/logos/npmjs/npmjs-ar21.svg" alt="npm" width="40" height="40"/>&nbsp;&nbsp;
+</p>
+
 <!-- Features -->  
 
 <br/>
@@ -93,12 +107,13 @@ const config = {
     dbHost: 'localhost',  
     dbUser: 'user',  
     dbDatabase: 'yourDatabaseName',
+    dbPassword: '',
 }
 ```
 
 <!-- Prerequisites -->  
 
-### :bangbang: Prerequisites
+### :heavy_exclamation_mark: Prerequisites
 
 You have to create your database by using this SQL:
 
