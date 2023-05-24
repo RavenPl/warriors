@@ -19,7 +19,7 @@ export const goBack = () => {
 
         if (time === 0) {
             clearInterval(id);
-            window.location.href = 'http://localhost:3000/warriors';
+            window.location.href = `http://localhost:3000/warriors`;
         }
     }, 1000);
 }
