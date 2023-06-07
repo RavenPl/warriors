@@ -1,7 +1,7 @@
 <div align="center">  
   <h1>Warriors!</h1>
   
-  # :video_game: <a href="https://warriors.networkmanager.pl/warriors">View Demo</a>
+  # :video_game: <a href="https://warriors.raven-pl.usermd.net">View Demo</a>
   
 </div>  
 <br/>
